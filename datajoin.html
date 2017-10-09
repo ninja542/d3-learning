@@ -1,0 +1,46 @@
+<html>
+	<style>
+#chart {
+	padding: 10px;
+	min-width: 315px;
+	max-width: 100%;
+	height: 100px;
+	background-color: #f6f6f6;
+}
+.bar {
+  float: left;
+  width: 30px;
+  margin-right: 20px;
+  background-color: #C1ADC4;
+}
+.bar:hover {
+	background-color: #927A94;
+}
+#axis {
+	height: 50px;
+	background-color: #f6f6f6;
+	padding:  10px;
+}
+.label {
+	border-radius: 50%;
+	color: black;
+	width: 30px;
+	height: 30px;
+	background-color: #19CD8B;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 30px;
+	float: left;
+}
+	</style>
+	<body>
+		<div id="chart">
+		</div>
+		<div id="axis">
+		</div>
+		<button>Add Data</button>
+	<script type="text/javascript" src="d3.min.js"></script>
+	<script type="text/javascript" src="datajoin.js"></script>
+	</body>
+</html>
