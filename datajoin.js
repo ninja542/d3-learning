@@ -24,6 +24,7 @@ function update() {
 	selection.exit().remove();
 	labelSelection.exit().remove();
 }
+
 d3.select("button").on("click", function(e){
 	if (numbers.length < 20){
 		numbers.push(Math.round(Math.random() * maxHeight));
