@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="editabletable.css">
+	</head>
+	<body>
+	<div id="app">
+		<table>
+			<tr>
+				<th>x</th>
+				<th>y</th>
+			</tr>
+			<tr v-for="item in coordinates">
+				<td v-on:click="edit=true"><div v-show="edit==false">{{item.x}}</div><input v-show="edit" v-bind:value="item.x" v-model.number="item.x" v-on:keyup.esc="edit=false" type="text"></td>
+				<td v-on:click="edit=true;"><div v-show="edit==false">{{item.y}}</div><input v-show="edit"  v-bind:value="item.y" v-model.number="item.y" v-on:keyup.esc="edit=false" type="text"></td>
+			</tr>
+		</table>
+		<button v-show="edit" v-on:click="addRow"> Add row </button>
+		<button v-show="edit==false" v-on:click="edit = true">Edit</button>
+		<button id="done" v-show="edit" v-on:click="edit = false">Done</button>
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="editabletable.js"></script>
+	</body>
+</html>

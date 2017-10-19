@@ -1,0 +1,23 @@
+#app {
+	margin-left: 50px;
+}
+table {
+	border-collapse: collapse;
+}
+table, th, td {
+	padding: 5px;
+	border: 1px solid black;
+}
+td {
+	width: 50px;
+	height: 40px;
+}
+input {
+	width: 50px;
+}
+button {
+	margin-top: 8px;
+}
+#done {
+	display: block;
+}
