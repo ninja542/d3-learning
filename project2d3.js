@@ -21,6 +21,7 @@ window.onload = function(){
 				returncolor = "blue";}
 			return returncolor;
 		});
+	circleattr.call(d3.drag().on("drag", dragstart));
 	var spacecircles = [30, 70, 110];
 	var jsoncircles = [{
 		"x_axis": 30,
@@ -51,6 +52,10 @@ window.onload = function(){
 		.attr("cy", function(d){return d.y_axis;})
 		.attr("r", function(d){return d.radius;})
 		.style("fill", function(d){return d.color;});
+	positioncircleattr.call(d3.drag().on("drag", dragstart));
+	function dragstart(d){
+		d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+	}
 };
 // var circleradii = [40, 20, 10];
 // var jsoncircleradii = [
